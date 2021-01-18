@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 public/
+https://guarded-tor-47381.herokuapp.com/php/login.php
