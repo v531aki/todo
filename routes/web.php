@@ -21,4 +21,10 @@ Route::resource("goals.todos", "TodoController")->middleware('auth');
 
 Route::post('/goals/{goal}/todos/{todo}/sort', 'TodoController@sort')->middleware('auth');
 
+Route::resource("tags", "TagController")->middleware('auth');
+
+Route::post('/goals/{goal}/todos/{todo}/tags/{tag}', 'TodoController@addTag')->middleware('auth');
+
+Route::delete('/goals/{goal}/todos/{todo}/tags/{tag}', 'TodoController@removeTag')->middleware('auth');
+
 Auth::routes();
